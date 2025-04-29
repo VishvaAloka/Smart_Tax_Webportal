@@ -8,6 +8,7 @@ import About from "../Pages/About";
 import Services from "../Pages/Services";
 import STO from "../Pages/STO";
 import AdminUser from "../Pages/Admin_User"; // ✅ Import your new page
+import Calculator from "../Pages/Calculator";
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/sto" element={<STO />} />
+        <Route path="/tax-calculator" element={<Calculator />} />
 
         <Route path="/signup" element={<Signup />} />
         {/* Protected Routes */}
