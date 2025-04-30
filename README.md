@@ -1,1 +1,2 @@
 # Smart_Tax_Webportal
+<p>Smart Tax is an innovative online tax platform designed to simplify tax-related processes for individuals and businesses. It provides a comprehensive range of services, including tax return filing, tax calculations, compliance guidance, and financial planning. Smart Tax aims to enhance user experience through a streamlined interface, easy navigation, and automation features that minimize manual effort.</p>
