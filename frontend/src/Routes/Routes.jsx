@@ -8,6 +8,9 @@ import About from "../Pages/About";
 import Services from "../Pages/Services";
 import STO from "../Pages/STO";
 import AdminUser from "../Pages/Admin_User"; // ✅ Import your new page
+import FAQask from "../Pages/FAQS ravindu/FAQask"; // ✅ Import your new page
+import FAQManage from "../Pages/FAQS ravindu/FAQManage"; // ✅ Import your new page
+import FAQList from "../Pages/FAQS ravindu/FAQList"; // ✅ Import your new page
 
 const AppRoutes = () => {
   return (
@@ -20,6 +23,11 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/sto" element={<STO />} />
+        <Route path="/faqask" element={<FAQask />} /> {/* ✅ Add FAQask route */}
+        <Route path="/faqmanage" element={<FAQManage />} /> {/* ✅ Add FAQManage route */}
+        <Route path="/faqlist" element={<FAQList />} /> {/* ✅ Add FAQList route */}
+     
+    
 
         <Route path="/signup" element={<Signup />} />
         {/* Protected Routes */}
