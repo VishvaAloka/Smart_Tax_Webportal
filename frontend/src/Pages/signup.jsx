@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, Mail, Lock, CheckCircle, Eye, EyeOff } from "lucide-react";
+import { User, Mail, Lock, CheckCircle, Eye, EyeOff, Percent,HandCoins } from "lucide-react";
 import axios from "axios";
 
 export default function SignupPage() {
@@ -9,6 +9,8 @@ export default function SignupPage() {
     email: "",
     password: "",
     confirmPassword: "",
+    salary: "",
+    businessIncome: ""
   });
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -37,33 +39,31 @@ export default function SignupPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage({ text: "", type: "" }); // Reset previous messages
+    setMessage({ text: "", type: "" });
 
     if (validateForm()) {
       setIsLoading(true);
       try {
-        // Make API call to backend
         const response = await axios.post("http://localhost:5000/api/auth/signup", {
           username: formData.username,
           email: formData.email,
           password: formData.password,
+          salary: parseFloat(formData.salary), 
+          business_income: parseFloat(formData.businessIncome) 
         });
 
-        // Handle successful response
         setMessage({
           text: response.data.message || "Account created successfully!",
           type: "success",
         });
 
-        // Redirect to login page after successful signup
         setTimeout(() => {
           window.location.href = "/login";
         }, 2000);
       } catch (error) {
         console.error("Registration error:", error);
         setMessage({
-          text:
-            error.response?.data?.error || "Signup failed. Please try again.",
+          text: error.response?.data?.error || "Signup failed. Please try again.",
           type: "error",
         });
       } finally {
@@ -78,7 +78,6 @@ export default function SignupPage() {
       ...prev,
       [name]: value,
     }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -116,7 +115,6 @@ export default function SignupPage() {
             <p className="mt-2 text-gray-600">Join us today and get started</p>
           </motion.div>
 
-          {/* Status Message Display */}
           <AnimatePresence>
             {message.text && (
               <motion.div
@@ -288,6 +286,78 @@ export default function SignupPage() {
                       className="text-red-500 text-sm mt-1"
                     >
                       {errors.confirmPassword}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            </div>
+
+            <div>
+              <motion.div whileTap={{ scale: 0.99 }} className="relative">
+                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    <HandCoins className="w-5 h-5" />
+                  </motion.div>
+                </div>
+                <input
+                  type="text"
+                  name="salary"
+                  value={formData.salary}
+                  onChange={handleChange}
+                  placeholder="Salary"
+                  className={`w-full pl-10 pr-4 py-3 rounded-lg border ${
+                    errors.salary ? "border-red-500" : "border-gray-300"
+                  } focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200 text-black`}
+                />
+                <AnimatePresence>
+                  {errors.salary && (
+                    <motion.p
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="text-red-500 text-sm mt-1"
+                    >
+                      {errors.salary}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            </div>
+
+            <div>
+              <motion.div whileTap={{ scale: 0.99 }} className="relative">
+                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    <HandCoins className="w-5 h-5" />
+                  </motion.div>
+                </div>
+                <input
+                  type="text"
+                  name="businessIncome"
+                  value={formData.businessIncome}
+                  onChange={handleChange}
+                  placeholder="Business Income"
+                  className={`w-full pl-10 pr-4 py-3 rounded-lg border ${
+                    errors.businessIncome ? "border-red-500" : "border-gray-300"
+                  } focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200 text-black`}
+                />
+                <AnimatePresence>
+                  {errors.businessIncome && (
+                    <motion.p
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="text-red-500 text-sm mt-1"
+                    >
+                      {errors.businessIncome}
                     </motion.p>
                   )}
                 </AnimatePresence>
