@@ -3,12 +3,21 @@ const jwt = require("jsonwebtoken");
 
 // Generate JWT Token with user_type
 const generateToken = (id, user_type) => {
-  return jwt.sign({ id, user_type }, process.env.JWT_SECRET, { expiresIn: "30d" });
+  return jwt.sign({ id, user_type }, process.env.JWT_SECRET, {
+    expiresIn: "30d",
+  });
 };
 
 // Register User (NO PASSWORD HASHING)
 const registerUser = async (req, res) => {
-  const { username, email, password, user_type } = req.body; // Include user_type in registration
+  const {
+    username,
+    email,
+    password,
+    user_type,
+    salary,
+    business_income,
+  } = req.body; // Include user_type in registration
 
   try {
     // Check if user exists
@@ -18,7 +27,14 @@ const registerUser = async (req, res) => {
     }
 
     // Save user (Password stored as plain text)
-    const newUser = new User({ username, email, password, user_type }); // Save user_type
+    const newUser = new User({
+      username,
+      email,
+      password,
+      user_type,
+      salary,
+      business_income,
+    }); // Save user_type
     await newUser.save();
 
     // Generate a token for the new user
@@ -27,7 +43,13 @@ const registerUser = async (req, res) => {
     res.json({
       message: "User registered successfully",
       token,
-      user: { username: newUser.username, email: newUser.email, user_type: newUser.user_type },
+      user: {
+        username: newUser.username,
+        email: newUser.email,
+        user_type: newUser.user_type,
+        salary: newUser.salary,
+        business_income: newUser.business_income,
+      },
     });
   } catch (error) {
     res.status(500).json({ error: "Server error" });
@@ -59,7 +81,7 @@ const loginUser = async (req, res) => {
       user: {
         username: user.username,
         email: user.email,
-        user_type: user.user_type,  // Include user_type in the response
+        user_type: user.user_type, // Include user_type in the response
       },
     });
   } catch (error) {
@@ -72,7 +94,12 @@ const getUser = async (req, res) => {
   try {
     const user = await User.findById(req.user.id);
     if (user) {
-      res.json({ _id: user.id, username: user.username, email: user.email, user_type: user.user_type });
+      res.json({
+        _id: user.id,
+        username: user.username,
+        email: user.email,
+        user_type: user.user_type,
+      });
     } else {
       res.status(404).json({ message: "User not found" });
     }
@@ -81,4 +108,22 @@ const getUser = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser, getUser };
+const getUserProfile = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    res.json({
+      username: user.username,
+      email: user.email,
+      salary: user.salary,
+      business_income: user.business_income,
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Server error" });
+  }
+};
+
+module.exports = { registerUser, loginUser, getUser, getUserProfile };

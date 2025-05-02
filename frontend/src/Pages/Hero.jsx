@@ -22,6 +22,7 @@ import Services from "./Services";
 import About from "./About";
 import Contact from "./Contact";
 import STO from "./STO";
+import { Link } from "react-router-dom";
 
 const Hero = ({ theme }) => {
   // Australian tax key dates for the current tax year
@@ -252,17 +253,19 @@ const Hero = ({ theme }) => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <button
-                  className="group bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white px-7 py-4 rounded-xl font-medium transition-all 
+                <Link to="/tax-calculator">
+                  <button
+                    className="group bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white px-7 py-4 rounded-xl font-medium transition-all 
                   shadow-lg hover:shadow-blue-500/30 flex items-center gap-3 animate-fade-in"
-                >
-                  <div className="relative">
-                    <Calculator className="w-5 h-5" />
-                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full animate-ping"></span>
-                  </div>
-                  Start Calculation
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
+                  >
+                    <div className="relative">
+                      <Calculator className="w-5 h-5" />
+                      <span className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full animate-ping"></span>
+                    </div>
+                    Start Calculation
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </Link>
 
                 <button
                   className="group bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white 
