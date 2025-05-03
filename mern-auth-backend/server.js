@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");  // Import userRoutes
+const faqRoutes = require("./routes/FAQ_routes"); // Import FAQ routes
 const User = require("./models/User");
 
 
@@ -21,6 +22,8 @@ app.use("/api/auth", authRoutes);
 
 // Define the route to get all users
 app.use("/api/users", userRoutes);  // Updated this line
+
+app.use("/api/faqs", faqRoutes); // Add FAQ routes
   
 
 const PORT = process.env.PORT || 5000;

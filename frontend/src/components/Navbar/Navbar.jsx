@@ -21,7 +21,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export const Navlinks = [
   { id: 1, name: "HOME", link: "/" },
   { id: 2, name: "PAYMENT", link: "/#payment" },
-  { id: 3, name: "FAQ", link: "/#faq" },
+  { id: 3, name: "FAQ", link: "/faqlist" },
   { id: 4, name: "ABOUT US", link: "/about" },
   { id: 5, name: "SERVICES", link: "/Services" },
 ];
@@ -282,8 +282,8 @@ const Navbar = ({ theme, setTheme }) => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+          ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md"
+          : "bg-gradient-to-r from-blue-600 to-blue-400"
       }`}
     >
       {/* Tax Tip Banner */}
@@ -313,9 +313,9 @@ const Navbar = ({ theme, setTheme }) => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 lg:px-16 py-5 flex justify-between items-center">
+      <div className="container mx-auto px-6 lg:px-16 py-4 flex justify-between items-center">
         <motion.div
-          className="font-serif text-4xl md:text-5xl"
+          className="font-serif text-3xl md:text-4xl"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -342,16 +342,6 @@ const Navbar = ({ theme, setTheme }) => {
           >
             Tax
           </motion.span>
-          <motion.i
-            className="fa-sharp fa-thin fa-copyright text-sm ml-2"
-            style={{ color: "#ffffff" }}
-            animate={{ rotate: [0, 360] }}
-            transition={{
-              duration: 5,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-          ></motion.i>
         </motion.div>
 
         {/* Desktop Navigation */}
