@@ -18,10 +18,12 @@ Celebratory animations 🎉 upon successful submissions
 "Taxes made simple, smart, and secure—so you can focus on what matters." 🌟
 
 Group Details
-| First Header  | Registration Number	 |  Email	                    |  GitHub Profile	            | Status
-| ------------- | -------------------- |  ------------------------- |  -------------------------- | ----------------------
-| ALOKA A.M.R.V | IT22312662           |  IT22312662@my.sliit.lk    |   @VishvaAloka              |  
-| Content Cell  | Content Cell         |  Content Cell              |                             |
+| First Header        | Registration Number	 |  Email	                    |  GitHub Profile	            | Status
+| -------------       | -------------------- |  ------------------------- |  -------------------------- | ----------------------
+| ALOKA A.M.R.V       | IT22312662           |  IT22312662@my.sliit.lk    |   @VishvaAloka              |  ⭐Leader
+| Jayalath M.D. T. L  | IT22328366           |  IT22328366@my.sliit.lk    |    @Thiwanka                |   👨‍💻Member
+| Wickramasuriya C I  | IT22890528           |  IT22890528@my.sliit.lk    |    @Chehara                 |   👨‍💻Member
+| GALAPPATHTHI A G R S| IT22345578           |  IT22345578@my.sliit.lk    |     @Ravindu                |   👨‍💻Member
 
 📲 Download the app today and take control of your finances with confidence!</p>
 
