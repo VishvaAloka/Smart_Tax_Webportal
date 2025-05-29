@@ -17,6 +17,12 @@ Celebratory animations 🎉 upon successful submissions
 
 "Taxes made simple, smart, and secure—so you can focus on what matters." 🌟
 
+Group Details
+| Name         | Registration Number	 | Email	           |              GitHub Profile	|
+| :---         |     :---:      |                   ---: |                      ---: |
+| ALOKA A.M.R.V   | IT22312662     | it22312662@my.sliit.lk   |   @VishvaAloka
+| git diff     | git diff       | git diff      |
+
 📲 Download the app today and take control of your finances with confidence!</p>
 
 <p align="center"><img width="80%" src="https://github.com/user-attachments/assets/a11a8387-9332-4295-bf2a-218c4c7f5afa">
