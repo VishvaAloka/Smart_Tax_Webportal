@@ -17,6 +17,8 @@ Celebratory animations 🎉 upon successful submissions
 
 "Taxes made simple, smart, and secure—so you can focus on what matters." 🌟
 
+📲 Download the app today and take control of your finances with confidence!
+
 Group Details
 | First Header        | Registration Number	 |  Email	                    |  GitHub Profile	            | Status
 | -------------       | -------------------- |  ------------------------- |  -------------------------- | ----------------------
@@ -25,7 +27,7 @@ Group Details
 | Wickramasuriya C I  | IT22890528           |  IT22890528@my.sliit.lk    |    @Chehara                 |   👨‍💻Member
 | GALAPPATHTHI A G R S| IT22345578           |  IT22345578@my.sliit.lk    |     @Ravindu                |   👨‍💻Member
 
-📲 Download the app today and take control of your finances with confidence!</p>
+</p>
 
 <p align="center"><img width="80%" src="https://github.com/user-attachments/assets/a11a8387-9332-4295-bf2a-218c4c7f5afa">
 <p align="center"><img width="80%" src="https://github.com/user-attachments/assets/518fa802-82d9-4fb2-87db-520a2acb2d10">
