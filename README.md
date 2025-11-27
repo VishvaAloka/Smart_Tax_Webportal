@@ -20,7 +20,7 @@ Celebratory animations 🎉 upon successful submissions
 📲 Download the app today and take control of your finances with confidence!
 
 Group Details
-| First Header        | Registration Number	 |  Email	                    |  GitHub Profile	            | Status
+| Name                | Registration Number	 |  Email	                    |  GitHub Profile	            | Status
 | -------------       | -------------------- |  ------------------------- |  -------------------------- | ----------------------
 | ALOKA A.M.R.V       | IT22312662           |  IT22312662@my.sliit.lk    |   @VishvaAloka              |  ⭐Leader
 | Jayalath M.D. T. L  | IT22328366           |  IT22328366@my.sliit.lk    |    @Thiwanka                |   👨‍💻Member
