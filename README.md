@@ -17,7 +17,12 @@ Celebratory animations 🎉 upon successful submissions
 
 "Taxes made simple, smart, and secure—so you can focus on what matters." 🌟
 
-📲 Download the app today and take control of your finances with confidence!
+🎨 Design Prototype
+Explore the full UI/UX design of Smart Tax on Figma:
+🔗 Smart Tax Web Site — Figma Design
+
+📲 Get Started Today
+Download the app and take full control of your finances — with the clarity, security, and confidence you deserve.
 
 Group Details
 | Name                | Registration Number	 |  Email	                    |  GitHub Profile	            | Status
