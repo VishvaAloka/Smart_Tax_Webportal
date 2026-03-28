@@ -19,7 +19,7 @@ Celebratory animations 🎉 upon successful submissions
 
 🎨 Design Prototype
 Explore the full UI/UX design of Smart Tax on Figma:
-🔗 Smart Tax Web Site — Figma Design
+🔗 Smart Tax Web Site — Figma Design (https://www.figma.com/design/NHAQdJNbPzjwcdIQEQeMLJ/Smart-Tax-Web-Site?node-id=0-1&t=DyEYrzz4SS6aJ5RH-1)
 
 📲 Get Started Today
 Download the app and take full control of your finances — with the clarity, security, and confidence you deserve.
